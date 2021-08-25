@@ -1,6 +1,7 @@
 import { namedays } from "./namedays"
 
 export { namedays } from "./namedays"
+export type { Nameday } from "./namedays"
 
 export function today() {
   const today = {
