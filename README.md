@@ -27,7 +27,6 @@ It can be imported like this:
 import { Nameday } from "namedays"
 ```
 
-
 ### `namedays: Nameday[]`
 
 A list of all namedays.
@@ -43,23 +42,23 @@ Returns namedays of current day.
 ```javascript
 import { today } from "namedays"
 
-today() // assuming today's date is August 25th
+today() // assuming today's date is May 2nd
 /*
   [
     {
-      id: "8-25-1",
-      name: "Louise",
+      id: "5-2-1",
+      name: "Filip",
       date: {
-        month: 8,
-        day: 25,
+        month: 5,
+        day: 2,
       },
     },
     {
-      id: "8-25-2",
-      name: "Lovisa",
+      id: "5-2-2",
+      name: "Filippa",
       date: {
-        month: 8,
-        day: 25,
+        month: 5,
+        day: 2,
       },
     },
   ]
@@ -73,14 +72,14 @@ Returns nameday of specified name.
 ```javascript
 import { when } from "namedays"
 
-when("Lovisa")
+when("Filip")
 /*
   {
-    id: "8-25-2",
-    name: "Lovisa",
+    id: "5-2-1",
+    name: "Filip",
     date: {
-      month: 8,
-      day: 25,
+      month: 5,
+      day: 2,
     },
   },
 */
@@ -113,29 +112,29 @@ Return namedays of specified date.
 ```javascript
 import { date } from "namedays"
 
-date({ month: 2 })
-// Returns all namedays in February
+date({ month: 5 })
+// Returns all namedays in May
 
-date({ day: 1 })
-// Returns all namedays the 1st every month
+date({ day: 2 })
+// Returns all namedays the 2nd every month
 
-date({ month: 2, day: 1 })
+date({ month: 5, day: 2 })
 /*
   [
     {
-      id: "2-1-1",
-      name: "Max",
+      id: "5-2-1",
+      name: "Filip",
       date: {
-        month: 2,
-        day: 1,
+        month: 5,
+        day: 2,
       },
     },
     {
-      id: "2-1-2",
-      name: "Maximilian",
+      id: "5-2-2",
+      name: "Filippa",
       date: {
-        month: 2,
-        day: 1,
+        month: 5,
+        day: 2,
       },
     },
   ]
