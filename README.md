@@ -112,13 +112,13 @@ Return namedays of specified date.
 ```javascript
 import { date } from "namedays"
 
-date(date: { month: 2 })
+date({ month: 2 })
 // Returns all namedays in February
 
-date(date: { day: 1 })
+date({ day: 1 })
 // Returns all namedays the 1st every month
 
-date(date: { month: 2, day: 1 })
+date({ month: 2, day: 1 })
 /*
   [
     {
