@@ -7,10 +7,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "lib",
     "module": "commonjs",
     "declaration": true,
   },
   "include": [
-    "index.ts",
+    "src/index.ts",
   ]
 }

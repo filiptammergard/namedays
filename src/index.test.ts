@@ -26,8 +26,6 @@ test("id 5-2-1 to return Filip's nameday", () => {
   expect(input).toStrictEqual(nameday)
 })
 
-
-
 test("id 5-2-1 to return Filip's nameday", () => {
   const input = who("5-2-1")
   const nameday = {

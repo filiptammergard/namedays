@@ -17,10 +17,7 @@
     "typescript": "^4.3.5"
   },
   "files": [
-    "index.js",
-    "index.d.ts",
-    "namedays.js",
-    "namedays.d.ts"
+    "lib"
   ],
   "repository": {
     "type": "git",
