@@ -8,11 +8,10 @@ export function today(): Nameday[] {
     month: new Date().getMonth() + 1,
     day: new Date().getDate(),
   }
-  const result = namedays.filter(
+  return namedays.filter(
     (nameday) =>
       nameday.date.month === today.month && nameday.date.day === today.day
   )
-  return result
 }
 
 export function when(name: string): Nameday {
