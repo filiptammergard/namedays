@@ -1,5 +1,7 @@
 import { namedays } from "./namedays"
 
+export { namedays } from "./namedays"
+
 export function today() {
   const today = {
     month: new Date().getMonth() + 1,
