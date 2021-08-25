@@ -1,0 +1,27 @@
+{
+  "name": "namedays",
+  "version": "1.0.0",
+  "description": "A minimal API for Swedish namedays",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiptammergard/namedays.git"
+  },
+  "keywords": [
+    "nameday",
+    "namedays",
+    "name day",
+    "swedish namedays",
+    "namnsdag",
+    "namnsdagar"
+  ],
+  "author": "Filip Tammergård <filip+npm@tammergard.se> (https://tammergard.se/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filiptammergard/namedays/issues"
+  },
+  "homepage": "https://github.com/filiptammergard/namedays#readme"
+}
