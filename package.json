@@ -1,14 +1,19 @@
 {
   "name": "namedays",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A minimal API for Swedish namedays",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "test"
+    "test": "test",
+    "release": "semantic-release"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/github": "^7.2.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
     "prettier": "^2.3.2",
+    "semantic-release": "^17.4.6",
     "typescript": "^4.3.5"
   },
   "files": [
