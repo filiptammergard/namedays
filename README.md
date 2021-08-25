@@ -105,20 +105,20 @@ who("5-2-1")
 */
 ```
 
-### `date(date: { month?: number; day?: number }): Nameday[]`
+### `on(date: { month?: number; day?: number }): Nameday[]`
 
 Return namedays of specified date.
 
 ```javascript
 import { date } from "namedays"
 
-date({ month: 5 })
+on({ month: 5 })
 // Returns all namedays in May
 
-date({ day: 2 })
+on({ day: 2 })
 // Returns all namedays the 2nd every month
 
-date({ month: 5, day: 2 })
+on({ month: 5, day: 2 })
 /*
   [
     {
