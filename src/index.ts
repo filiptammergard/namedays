@@ -24,10 +24,10 @@ export function who(id: string): Nameday {
   return namedays.filter((nameday) => nameday.id === id)[0]
 }
 
-export function date(date: { day: number }): Nameday[]
-export function date(date: { month: number }): Nameday[]
-export function date(date: { month: number; day: number }): Nameday[]
-export function date(date: { month?: number; day?: number }): Nameday[] {
+export function on(date: { day: number }): Nameday[]
+export function on(date: { month: number }): Nameday[]
+export function on(date: { month: number; day: number }): Nameday[]
+export function on(date: { month?: number; day?: number }): Nameday[] {
   const { month, day } = date
   if (day && month) {
     return namedays.filter(
