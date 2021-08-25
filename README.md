@@ -46,7 +46,7 @@ today() // assuming today's date is August 25th
 
 `when(name: string): Nameday`
 
-Returns namedays of specified name.
+Returns nameday of specified name.
 
 ```javascript
 import { when } from "namedays"
@@ -66,6 +66,8 @@ when("Lovisa")
 
 `who(id: string): Nameday`
 
+Returns nameday of specified ID.
+
 ```javascript
 import { who } from "namedays"
 
@@ -79,6 +81,42 @@ who("5-2-1")
       day: 2,
     },
   },
+*/
+```
+
+`date(date: { month?: number; day?: number }): Nameday[]`
+
+Return namedays of specified date.
+
+```javascript
+import { date } from "namedays"
+
+date(date: { month: 2 })
+// Returns all namedays in February
+
+date(date: { day: 1 })
+// Returns all namedays the 1st every month
+
+date(date: { month: 2, day: 1 })
+/*
+  [
+    {
+      id: "2-1-1",
+      name: "Max",
+      date: {
+        month: 2,
+        day: 1,
+      },
+    },
+    {
+      id: "2-1-2",
+      name: "Maximilian",
+      date: {
+        month: 2,
+        day: 1,
+      },
+    },
+  ]
 */
 ```
 
