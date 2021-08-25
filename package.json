@@ -4,8 +4,16 @@
   "description": "A minimal API for Swedish namedays",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "test"
   },
+  "devDependencies": {
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filiptammergard/namedays.git"
@@ -23,8 +31,5 @@
   "bugs": {
     "url": "https://github.com/filiptammergard/namedays/issues"
   },
-  "homepage": "https://github.com/filiptammergard/namedays#readme",
-  "devDependencies": {
-    "typescript": "^4.3.5"
-  }
+  "homepage": "https://github.com/filiptammergard/namedays#readme"
 }
