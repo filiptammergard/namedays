@@ -44,7 +44,7 @@ today() // assuming today's date is August 25th
 */
 ```
 
-`when(names: string | string[]): Nameday[]`
+`when(name: string): Nameday`
 
 Returns namedays of specified name.
 
@@ -62,18 +62,16 @@ when("Lovisa")
     },
   },
 */
+```
 
-when(["Lovisa", "Filip"])
+`who(id: string): Nameday`
+
+```javascript
+import { who } from "namedays"
+
+who("5-2-1")
 /*
-  {
-    id: "8-25-2",
-    name: "Lovisa",
-    date: {
-      month: 8,
-      day: 25,
-    },
-  },
-  {
+ {
     id: "5-2-1",
     name: "Filip",
     date: {
