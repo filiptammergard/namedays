@@ -1,4 +1,4 @@
-import { namedays } from "./namedays"
+import { Nameday, namedays } from "./namedays"
 
 export { namedays } from "./namedays"
 export type { Nameday } from "./namedays"
@@ -22,15 +22,19 @@ export function when(name: string) {
   return result
 }
 
-export function who(id: string) {
-  const [month, day, index] = id.split("-").map((str) => parseInt(str))
-  if (!index && !day) {
-    return namedays.filter((nameday) => nameday.date.month === month)
-  }
-  if (!index) {
+export function who(id?: string) {
+  return namedays.filter((nameday) => nameday.id === id)
+}
+
+export function date(month: number): Nameday[]
+export function date(month: number, day: number): Nameday[]
+export function date(month?: number, day?: number) {
+  if (day && month) {
     return namedays.filter(
       (nameday) => nameday.date.month === month && nameday.date.day === day
     )
   }
-  return namedays.filter((nameday) => nameday.id === id)
+  if (month) {
+    return namedays.filter((nameday) => nameday.date.month === month)
+  }
 }
