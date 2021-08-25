@@ -22,11 +22,15 @@ export function when(name: string) {
   return result
 }
 
-export function who(month: number, day?: number) {
-  if (!day) {
+export function who(id: string) {
+  const [month, day, index] = id.split("-").map((str) => parseInt(str))
+  if (!index && !day) {
     return namedays.filter((nameday) => nameday.date.month === month)
   }
-  return namedays.filter(
-    (nameday) => nameday.date.month === month && nameday.date.day === day
-  )
+  if (!index) {
+    return namedays.filter(
+      (nameday) => nameday.date.month === month && nameday.date.day === day
+    )
+  }
+  return namedays.filter((nameday) => nameday.id === id)
 }
