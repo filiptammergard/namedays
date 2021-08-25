@@ -8,10 +8,31 @@ npm i namedays
 
 ## Usage
 
+The interface that all namedays adhere to is called Nameday and looks like this:
+
+```javascript
+interface Nameday {
+  id: string
+  name: string
+  date: {
+    month: number
+    day: number
+  }
+}
+```
+
+It can be imported and used externally like this:
+
+```javascript
+import { Nameday } from "namedays"
+```
+
+`namedays: Nameday[]`
+
+A list of all namedays.
+
 ```javascript
 import { namedays } from "namedays"
-
-// namedays is the complete list of namedays
 ```
 
 `today(): Nameday[]`
