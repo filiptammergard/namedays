@@ -15,17 +15,10 @@ export function today() {
   return result
 }
 
-export function when(names: string[]): Nameday[]
-export function when(names: string): Nameday[]
-export function when(names: string | string[]) {
-  if (typeof names === "string") {
-    return namedays.filter(
-      (nameday) => nameday.name.toLowerCase() === names.toLowerCase()
-    )
-  }
-  return namedays.filter((nameday) =>
-    names.map((name) => name.toLowerCase()).includes(nameday.name.toLowerCase())
-  )
+export function when(name: string) {
+  return namedays.filter(
+    (nameday) => nameday.name.toLowerCase() === name.toLowerCase()
+  )[0]
 }
 
 export function who(id?: string) {
