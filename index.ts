@@ -21,7 +21,7 @@ export function when(name: string) {
   )[0]
 }
 
-export function who(id?: string) {
+export function who(id: string) {
   return namedays.filter((nameday) => nameday.id === id)
 }
 
