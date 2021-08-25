@@ -22,10 +22,11 @@ export function when(name: string) {
   return result
 }
 
-export function who(date: { month: number; day: number }) {
-  const result = namedays.filter(
-    (nameday) =>
-      nameday.date.month === date.month && nameday.date.day === date.day
+export function who(month: number, day?: number) {
+  if (!day) {
+    return namedays.filter((nameday) => nameday.date.month === month)
+  }
+  return namedays.filter(
+    (nameday) => nameday.date.month === month && nameday.date.day === day
   )
-  return result
 }
