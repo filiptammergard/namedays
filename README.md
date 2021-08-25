@@ -10,7 +10,7 @@ npm i namedays
 
 The interface that all namedays adhere to is called Nameday and looks like this:
 
-```javascript
+```typescript
 interface Nameday {
   id: string
   name: string
@@ -21,13 +21,14 @@ interface Nameday {
 }
 ```
 
-It can be imported and used externally like this:
+It can be imported like this:
 
 ```javascript
 import { Nameday } from "namedays"
 ```
 
-`namedays: Nameday[]`
+
+### `namedays: Nameday[]`
 
 A list of all namedays.
 
@@ -35,7 +36,7 @@ A list of all namedays.
 import { namedays } from "namedays"
 ```
 
-`today(): Nameday[]`
+### `today(): Nameday[]`
 
 Returns namedays of current day.
 
@@ -65,7 +66,7 @@ today() // assuming today's date is August 25th
 */
 ```
 
-`when(name: string): Nameday`
+### `when(name: string): Nameday`
 
 Returns nameday of specified name.
 
@@ -85,7 +86,7 @@ when("Lovisa")
 */
 ```
 
-`who(id: string): Nameday`
+### `who(id: string): Nameday`
 
 Returns nameday of specified ID.
 
@@ -105,7 +106,7 @@ who("5-2-1")
 */
 ```
 
-`date(date: { month?: number; day?: number }): Nameday[]`
+### `date(date: { month?: number; day?: number }): Nameday[]`
 
 Return namedays of specified date.
 
