@@ -15,11 +15,17 @@ export function today() {
   return result
 }
 
-export function when(name: string) {
-  const result = namedays.filter(
-    (nameday) => nameday.name.toLowerCase() === name.toLowerCase()
+export function when(names: string[]): Nameday[]
+export function when(names: string): Nameday[]
+export function when(names: string | string[]) {
+  if (typeof names === "string") {
+    return namedays.filter(
+      (nameday) => nameday.name.toLowerCase() === names.toLowerCase()
+    )
+  }
+  return namedays.filter((nameday) =>
+    names.map((name) => name.toLowerCase()).includes(nameday.name.toLowerCase())
   )
-  return result
 }
 
 export function who(id?: string) {
@@ -28,7 +34,7 @@ export function who(id?: string) {
 
 export function date(month: number): Nameday[]
 export function date(month: number, day: number): Nameday[]
-export function date(month?: number, day?: number) {
+export function date(month: number, day?: number) {
   if (day && month) {
     return namedays.filter(
       (nameday) => nameday.date.month === month && nameday.date.day === day

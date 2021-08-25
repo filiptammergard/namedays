@@ -2,7 +2,6 @@
   "name": "namedays",
   "version": "0.0.0-development",
   "description": "A minimal API for Swedish namedays",
-  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "test": "test"
