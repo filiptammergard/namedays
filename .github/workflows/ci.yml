@@ -18,9 +18,10 @@ jobs:
           node-version: 12
 
       - name: Run tests
-        run: npm run tst
+        run: npm run test
     
   release:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
