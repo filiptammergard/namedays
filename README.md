@@ -110,7 +110,7 @@ who("5-2-1")
 Return namedays of specified date.
 
 ```javascript
-import { date } from "namedays"
+import { on } from "namedays"
 
 on({ month: 5 })
 // Returns all namedays in May
