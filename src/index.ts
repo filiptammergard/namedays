@@ -10,13 +10,13 @@ export function today(): Nameday[] {
   }
   return namedays.filter(
     (nameday) =>
-      nameday.date.month === today.month && nameday.date.day === today.day
+      nameday.date.month === today.month && nameday.date.day === today.day,
   )
 }
 
 export function when(name: string): Nameday {
   return namedays.filter(
-    (nameday) => nameday.name.toLowerCase() === name.toLowerCase()
+    (nameday) => nameday.name.toLowerCase() === name.toLowerCase(),
   )[0]
 }
 
@@ -31,7 +31,7 @@ export function on(date: { month?: number; day?: number }): Nameday[] {
   const { month, day } = date
   if (day && month) {
     return namedays.filter(
-      (nameday) => nameday.date.month === month && nameday.date.day === day
+      (nameday) => nameday.date.month === month && nameday.date.day === day,
     )
   }
   if (month) {
