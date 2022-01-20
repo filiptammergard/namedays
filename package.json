@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.16.10",
-    "@babel/preset-env": "7.16.10",
+    "@babel/preset-env": "7.16.11",
     "@babel/preset-typescript": "7.16.7",
     "@tammergard/eslint-config-base": "2.2.0",
     "@tammergard/prettier-config": "1.4.0",
