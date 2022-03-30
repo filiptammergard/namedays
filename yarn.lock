@@ -1603,10 +1603,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tammergard/eslint-config-base@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@tammergard/eslint-config-base/-/eslint-config-base-2.2.0.tgz#577aeb909c47e5f4bbb868511308ef3a4bef0c98"
-  integrity sha512-KcgW1loxHJeljkB0Q43CloD9hn6G0soSYp9DkCT792zTtwFpux7Ixo+PBA5V4xIJTvZy6suEp9cNZyCQl/Y0xQ==
+"@tammergard/eslint-config-base@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@tammergard/eslint-config-base/-/eslint-config-base-3.0.0.tgz#c048c1a9868f6b6486a6ba56317174c31ebb37a1"
+  integrity sha512-ESh1mcgbAHeHycL03R9J40A4CNjlF2lqwmS6PrGtlNUkros9dx2IOY35EuhX1svjdzkC4JXldNsf0XuK8EItig==
+  dependencies:
+    eslint-config-airbnb-base "15.0.0"
+    eslint-config-prettier "8.5.0"
+    eslint-plugin-import "2.25.4"
+    eslint-plugin-prettier "4.0.0"
 
 "@tammergard/prettier-config@1.5.0":
   version "1.5.0"
