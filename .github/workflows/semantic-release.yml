@@ -1,44 +1,26 @@
-name: CI
+name: Semantic Release
 
 on:
   push:
     branches:
       - main
 
-permissions: write-all
-
 jobs:
-  test:
+  semantic-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
       - name: Review
         run: yarn review
-
-  release:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3.0.0
-        with:
-          node-version: 16
-
-      - name: Review
-        run: yarn review
-
-      - name: Build
-        run: yarn build
 
       - name: Run semantic-release
         run: yarn semantic-release
