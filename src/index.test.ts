@@ -1,4 +1,5 @@
 import { on, when, who } from "./index"
+import { expect, test } from "vitest"
 
 test("name Filip to return Filip's nameday", () => {
   const input = when("Filip")

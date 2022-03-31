@@ -1,11 +1,8 @@
 {
+  "extends": "@tammergard/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "lib",
     "module": "commonjs",
     "declaration": true
-  },
-  "include": ["src/index.ts"]
+  }
 }
