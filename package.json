@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
-    "review": "yarn install --frozen-lockfile && yarn lint && yarn format-check && yarn test",
+    "review": "yarn install --immutable && yarn lint && yarn format-check && yarn test",
     "test": "vitest --run"
   },
   "devDependencies": {
@@ -42,5 +42,6 @@
   "bugs": {
     "url": "https://github.com/filiptammergard/namedays/issues"
   },
-  "homepage": "https://github.com/filiptammergard/namedays#readme"
+  "homepage": "https://github.com/filiptammergard/namedays#readme",
+  "packageManager": "yarn@3.2.1"
 }
