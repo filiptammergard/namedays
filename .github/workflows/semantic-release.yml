@@ -22,8 +22,8 @@ jobs:
       - name: Setup Yarn
         run: yarn set version berry
 
-      - name: Review
-        run: yarn review
+      - name: Install dependencies
+        run: yarn install --immutable
 
       - name: Run semantic-release
         run: yarn semantic-release

@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Setup Yarn
-        run: yarn set version berry
+      - name: Install dependencies
+        run: yarn install --immutable
 
       - name: Review
         run: yarn review
