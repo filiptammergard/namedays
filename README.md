@@ -1,5 +1,7 @@
 # namedays
 
+A minimal API for Swedish namedays
+
 ## Installation
 
 ```
