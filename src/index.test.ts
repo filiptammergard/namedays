@@ -1,7 +1,7 @@
-import { on, when, who } from "./index"
 import { expect, test } from "vitest"
+import { on, when, who } from "./index"
 
-test("name Filip to return Filip's nameday", () => {
+test(`when("Filip") to return Filip's nameday`, () => {
   const input = when("Filip")
   const nameday = {
     id: "5-2-1",
@@ -14,20 +14,7 @@ test("name Filip to return Filip's nameday", () => {
   expect(input).toStrictEqual(nameday)
 })
 
-test("id 5-2-1 to return Filip's nameday", () => {
-  const input = who("5-2-1")
-  const nameday = {
-    id: "5-2-1",
-    name: "Filip",
-    date: {
-      month: 5,
-      day: 2,
-    },
-  }
-  expect(input).toStrictEqual(nameday)
-})
-
-test("id 5-2-1 to return Filip's nameday", () => {
+test(`who("5-2-1") to return Filip's nameday`, () => {
   const input = who("5-2-1")
   const nameday = {
     id: "5-2-1",
