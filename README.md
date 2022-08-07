@@ -65,7 +65,7 @@ namedays.today()
 namedays.today({ countryCode: "SE" })
 ```
 
-### `when(name: string, settings?: { countryCode?: CountryCode }, ): Nameday[]`
+### `namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Nameday[]`
 
 Namedays of specified name.
 
@@ -79,7 +79,7 @@ namedays.when("Filip")
 namedays.when("Filip", { countryCode: "SE" })
 ```
 
-### `who(id: string): Nameday | undefined`
+### `namedays.who(id: string): Nameday | undefined`
 
 Nameday of specified id. `undefined` if there are no nameday with specified id.
 
@@ -89,7 +89,7 @@ import { namedays } from "namedays"
 namedays.who("SE-5-2-1")
 ```
 
-### `on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Nameday[]`
+### `namedays.on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Nameday[]`
 
 Namedays of specified date.
 
