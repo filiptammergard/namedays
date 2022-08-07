@@ -81,11 +81,12 @@ namedays.when("Filip", { countryCode: "SE" })
 
 ### `namedays.who(id: string): Nameday | undefined`
 
-Nameday of specified id. `undefined` if there are no nameday with specified id.
+Nameday of specified id.
 
 ```ts
 import { namedays } from "namedays"
 
+// nameday with id SE-5-2-1, `undefined` if there are no nameday with that id
 namedays.who("SE-5-2-1")
 ```
 
