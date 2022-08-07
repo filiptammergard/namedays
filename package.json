@@ -1,7 +1,7 @@
 {
   "name": "namedays",
   "version": "0.0.0-development",
-  "description": "A minimal API for Swedish namedays",
+  "description": "A minimal namedays API",
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
@@ -32,10 +32,7 @@
   "keywords": [
     "nameday",
     "namedays",
-    "name day",
-    "swedish namedays",
-    "namnsdag",
-    "namnsdagar"
+    "name day"
   ],
   "author": "Filip Tammergård <filip+npm@tammergard.se> (https://tammergard.se/)",
   "license": "MIT",

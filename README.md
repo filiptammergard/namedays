@@ -1,20 +1,28 @@
 # namedays
 
-A minimal API for Swedish namedays
+A minimal namedays API
 
 ## Installation
 
-```
-npm i namedays
+```bash
+# npm
+npm install namedays
+
+# yarn
+yarn add namedays
+
+# pnpm
+pnpm add namedays
 ```
 
 ## Usage
 
 The interface that all namedays adhere to is called Nameday and looks like this:
 
-```typescript
+```ts
 interface Nameday {
   id: string
+  countryCode: CountryCode
   name: string
   date: {
     month: number
@@ -23,124 +31,82 @@ interface Nameday {
 }
 ```
 
-It can be imported like this:
+`CountryCode` is the union type of country codes currently supported fully or
+partly.
 
-```javascript
+`Nameday` is available for usage if needed:
+
+```ts
 import { Nameday } from "namedays"
 ```
 
-### `namedays: Nameday[]`
+### `namedays.all()`
 
-A list of all namedays.
+All namedays.
 
-```javascript
+```ts
 import { namedays } from "namedays"
+
+// all namedays, regardless of which country
+namedays.all()
 ```
 
-### `today(): Nameday[]`
+### `namedays.today(settings?: { countryCode?: CountryCode }): Nameday[]`
 
-Returns namedays of current day.
+Namedays of current day.
 
-```javascript
-import { today } from "namedays"
+```ts
+import { namedays } from "namedays"
 
-today() // assuming today's date is May 2nd
-/*
-  [
-    {
-      id: "5-2-1",
-      name: "Filip",
-      date: {
-        month: 5,
-        day: 2,
-      },
-    },
-    {
-      id: "5-2-2",
-      name: "Filippa",
-      date: {
-        month: 5,
-        day: 2,
-      },
-    },
-  ]
-*/
+// all namedays of current day, regardless of country
+namedays.today()
+
+// all Swedish namedays of current day
+namedays.today({ countryCode: "SE" })
 ```
 
-### `when(name: string): Nameday`
+### `when(name: string, settings?: { countryCode?: CountryCode }, ): Nameday[]`
 
-Returns nameday of specified name.
+Namedays of specified name.
 
-```javascript
-import { when } from "namedays"
+```ts
+import { namedays } from "namedays"
 
-when("Filip")
-/*
-  {
-    id: "5-2-1",
-    name: "Filip",
-    date: {
-      month: 5,
-      day: 2,
-    },
-  },
-*/
+// all Filip's namedays, regardless of country
+namedays.when("Filip")
+
+// Filip's Swedish nameday
+namedays.when("Filip", { countryCode: "SE" })
 ```
 
-### `who(id: string): Nameday`
+### `who(id: string): Nameday | undefined`
 
-Returns nameday of specified ID.
+Nameday of specified id. `undefined` if there are no nameday with specified id.
 
-```javascript
-import { who } from "namedays"
+```ts
+import { namedays } from "namedays"
 
-who("5-2-1")
-/*
- {
-    id: "5-2-1",
-    name: "Filip",
-    date: {
-      month: 5,
-      day: 2,
-    },
-  },
-*/
+namedays.who("SE-5-2-1")
 ```
 
-### `on(date: { month?: number; day?: number }): Nameday[]`
+### `on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Nameday[]`
 
-Return namedays of specified date.
+Namedays of specified date.
 
-```javascript
-import { on } from "namedays"
+```ts
+import { namedays } from "namedays"
 
-on({ month: 5 })
-// Returns all namedays in May
+// all namedays in May, regardless of country
+namedays.on({ month: 5 })
 
-on({ day: 2 })
-// Returns all namedays the 2nd every month
+// all namedays the 2nd every month, regardless of country
+namedays.on({ day: 2 })
 
-on({ month: 5, day: 2 })
-/*
-  [
-    {
-      id: "5-2-1",
-      name: "Filip",
-      date: {
-        month: 5,
-        day: 2,
-      },
-    },
-    {
-      id: "5-2-2",
-      name: "Filippa",
-      date: {
-        month: 5,
-        day: 2,
-      },
-    },
-  ]
-*/
+// all namedays May 2nd, regardless of country
+namedays.on({ month: 5, day: 2 })
+
+// all Swedish namedays May 2nd
+namedays.on({ month: 5, day: 2 }, { countryCode: "SE" })
 ```
 
 ## License
