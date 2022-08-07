@@ -1,44 +1,17 @@
-import { Nameday, namedays } from "./namedays"
+import { namedays as all } from "./namedays/index"
+import { on } from "./on"
+import { today } from "./today"
+import { when } from "./when"
+import { where } from "./where"
+import { who } from "./who"
 
-export { namedays } from "./namedays"
-export type { Nameday } from "./namedays"
-
-export function today(): Nameday[] {
-  const today = {
-    month: new Date().getMonth() + 1,
-    day: new Date().getDate(),
-  }
-  return namedays.filter(
-    (nameday) =>
-      nameday.date.month === today.month && nameday.date.day === today.day,
-  )
+export const namedays = {
+  all,
+  on,
+  today,
+  when,
+  where,
+  who,
 }
 
-export function when(name: string): Nameday {
-  return namedays.filter(
-    (nameday) => nameday.name.toLowerCase() === name.toLowerCase(),
-  )[0]
-}
-
-export function who(id: string): Nameday {
-  return namedays.filter((nameday) => nameday.id === id)[0]
-}
-
-export function on(date: { day: number }): Nameday[]
-export function on(date: { month: number }): Nameday[]
-export function on(date: { month: number; day: number }): Nameday[]
-export function on(date: { month?: number; day?: number }): Nameday[] {
-  const { month, day } = date
-  if (day && month) {
-    return namedays.filter(
-      (nameday) => nameday.date.month === month && nameday.date.day === day,
-    )
-  }
-  if (month) {
-    return namedays.filter((nameday) => nameday.date.month === month)
-  }
-  if (day) {
-    return namedays.filter((nameday) => nameday.date.day === day)
-  }
-  throw new Error("Either a month, a day or both must be specified.")
-}
+export type { Nameday } from "./types"
