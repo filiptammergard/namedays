@@ -6,12 +6,12 @@ import { where } from "./where"
 import { who } from "./who"
 
 export const namedays = {
-  all,
-  on,
-  today,
-  when,
-  where,
-  who,
+	all,
+	on,
+	today,
+	when,
+	where,
+	who,
 }
 
 export type { Nameday } from "./types"

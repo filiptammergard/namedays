@@ -21,13 +21,13 @@ The interface that all namedays adhere to is called Nameday and looks like this:
 
 ```ts
 interface Nameday {
-  id: string
-  countryCode: CountryCode
-  name: string
-  date: {
-    month: number
-    day: number
-  }
+	id: string
+	countryCode: CountryCode
+	name: string
+	date: {
+		month: number
+		day: number
+	}
 }
 ```
 
