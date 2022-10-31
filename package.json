@@ -20,7 +20,7 @@
 		"semantic-release": "19.0.5",
 		"tsup": "6.3.0",
 		"typescript": "4.8.4",
-		"vitest": "0.24.3"
+		"vitest": "0.24.4"
 	},
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
