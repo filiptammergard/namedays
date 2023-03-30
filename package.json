@@ -22,6 +22,9 @@
 		"typescript": "5.0.2",
 		"vitest": "0.29.8"
 	},
+	"files": [
+		"dist"
+	],
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"exports": {
@@ -30,22 +33,18 @@
 			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/filiptammergard/namedays.git"
-	},
-	"keywords": [
-		"nameday",
-		"namedays",
-		"name day"
-	],
-	"author": "Filip Tammergård <filip+npm@tammergard.se> (https://tammergard.se/)",
-	"license": "MIT",
+	"homepage": "https://github.com/filiptammergard/namedays#readme",
 	"bugs": {
 		"url": "https://github.com/filiptammergard/namedays/issues"
 	},
-	"homepage": "https://github.com/filiptammergard/namedays#readme"
+	"license": "MIT",
+	"author": {
+		"name": "Filip Tammergård",
+		"email": "filip+npm@tammergard.se",
+		"url": "https://tammergard.se"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/filiptammergard/namedays.git"
+	}
 }
