@@ -1,9 +1,6 @@
 name: Review
 
-on:
-  push:
-    branches:
-      - **
+on: push
 
 jobs:
   review:
