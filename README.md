@@ -1,6 +1,6 @@
 # namedays
 
-A minimal namedays API
+A minimal namedays API.
 
 ## Installation
 

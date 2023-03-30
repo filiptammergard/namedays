@@ -7,17 +7,16 @@
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"format-check": "prettier --check .",
-		"review": "yarn install --frozen-lockfile && yarn format-check && yarn lint && yarn test && yarn build",
+		"review": "pnpm install --frozen-lockfile && pnpm format-check && pnpm lint && pnpm test && pnpm build",
 		"test": "vitest --run"
 	},
 	"devDependencies": {
+		"@changesets/cli": "^2.26.1",
 		"@tammergard/eslint-config-base": "3.2.0",
 		"@tammergard/prettier-config": "2.0.0",
-		"@tammergard/semantic-release-config-npm": "1.2.0",
 		"@tammergard/tsconfig": "2.2.0",
 		"eslint": "8.37.0",
 		"prettier": "2.8.7",
-		"semantic-release": "21.0.0",
 		"tsup": "6.7.0",
 		"typescript": "5.0.2",
 		"vitest": "0.29.8"
