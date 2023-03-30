@@ -720,10 +720,10 @@
   dependencies:
     conventional-changelog-conventionalcommits "5.0.0"
 
-"@tammergard/tsconfig@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tammergard/tsconfig/-/tsconfig-2.0.0.tgz#038c1e441f8d021e7d9737c11c5ae04a1bebcfbf"
-  integrity sha512-yFY83QwrmOT7mKTWlqg85ZNCHAMSKfZhXfBq8wDe2sMsO9uvQU12hi+6tUMWm2IAdg74rYbmSigDPmT9LeGKHw==
+"@tammergard/tsconfig@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@tammergard/tsconfig/-/tsconfig-2.2.0.tgz#a42e00fbc80b73e36fb608fcce67ef2d66196ea1"
+  integrity sha512-U83DSa4TFOzcIf7hYW5J/FprQMgvau8tpJKELJX+x+IH6UFIByJ3SpzIbwPSAwNFuxswlnEzyC9lq1jOHbNmRQ==
 
 "@tootallnate/once@2":
   version "2.0.0"
