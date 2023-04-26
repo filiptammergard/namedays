@@ -1,5 +1,5 @@
 import { filterByCountryCode } from "./lib/filterByCountryCode"
-import { CountryCode, Nameday } from "./types"
+import type { CountryCode, Nameday } from "./types"
 
 export function today(settings?: { countryCode?: CountryCode }): Nameday[] {
 	const today = {

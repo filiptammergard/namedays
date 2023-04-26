@@ -1,5 +1,5 @@
 import { namedays } from "../namedays"
-import { CountryCode, Nameday } from "../types"
+import type { CountryCode, Nameday } from "../types"
 
 export function filterByCountryCode(
 	countryCode: CountryCode | undefined,
