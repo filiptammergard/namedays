@@ -1,4 +1,4 @@
-import { Nameday } from "../types"
+import type { Nameday } from "../types"
 
 export const namedaysNO: Nameday[] = [
 	{
