@@ -1,6 +1,6 @@
 # namedays
 
-A minimal namedays API.
+A minimal API for namedays.
 
 ## Installation
 
@@ -40,9 +40,19 @@ partly.
 import { Nameday } from "namedays"
 ```
 
-### `namedays.all()`
+### All
+
+`namedays.all` is a function that returns all namedays.
+
+#### Parameters
+
+`namedays.all()` takes no parameters.
+
+#### Returns
 
 All namedays.
+
+#### Example
 
 ```ts
 import { namedays } from "namedays"
@@ -51,9 +61,17 @@ import { namedays } from "namedays"
 namedays.all()
 ```
 
-### `namedays.today(settings?: { countryCode?: CountryCode }): Array<Nameday>`
+### Today
 
-Namedays of current day.
+`namedays.today` is a function that returns namedays of the current day.
+
+#### Parameters
+
+- Optional `settings`: An object where country code can be set.
+
+#### Returns
+
+The namedays of today.
 
 ```ts
 import { namedays } from "namedays"
@@ -67,9 +85,22 @@ namedays.today({
 })
 ```
 
-### `namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Array<Nameday>`
+### When
 
-Namedays of specified name.
+`namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Array<Nameday>`
+
+`namedays.when` is a function that returns the nameday of a specific name.
+
+#### Parameters
+
+- `name`: The name you want the nameday for.
+- Optional `settings`: An object where country code can be set.
+
+#### Returns
+
+The nameday of the passed name.
+
+#### Examples
 
 ```ts
 import { namedays } from "namedays"
@@ -83,9 +114,19 @@ namedays.when("Filip", {
 })
 ```
 
-### `namedays.who(id: string): Nameday | undefined`
+### Who
 
-Nameday of specified id.
+`namedays.who` is a function that returns the nameday of a specific ID.
+
+#### Parameters
+
+- `id`: The ID of the nameday you want.
+
+#### Returns
+
+The nameday of a specific ID. If ID doesn't exist, `undefined` is returned.
+
+#### Examples
 
 ```ts
 import { namedays } from "namedays"
@@ -94,9 +135,20 @@ import { namedays } from "namedays"
 namedays.who("SE-5-2-1")
 ```
 
-### `namedays.on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Array<Nameday>`
+### On
 
-Namedays of specified date.
+`namedays.on` is a function that returns the namedays of a specific day.
+
+#### Parameters
+
+- `on`: The month and/or day you want the namedays for.
+- Optional `settings`: An object where country code can be set.
+
+#### Returns
+
+The namedays of a specific day.
+
+#### Examples
 
 ```ts
 import { namedays } from "namedays"
