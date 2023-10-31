@@ -3,7 +3,7 @@ import type { CountryCode, Nameday } from "../types"
 
 export function filterByCountryCode(
 	countryCode: CountryCode | undefined,
-): Nameday[] {
+): Array<Nameday> {
 	if (!countryCode) return namedays
 	return namedays.filter((nameday) => nameday.countryCode === countryCode)
 }

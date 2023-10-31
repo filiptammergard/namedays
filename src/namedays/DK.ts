@@ -1,6 +1,6 @@
 import type { Nameday } from "../types"
 
-export const namedaysDK: Nameday[] = [
+export const namedaysDK: Array<Nameday> = [
 	{
 		id: "DK-1-2-1",
 		countryCode: "DK",

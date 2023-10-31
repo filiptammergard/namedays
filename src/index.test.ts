@@ -26,7 +26,9 @@ test("does not filter on country code when no country code is given", () => {
 })
 
 test("filters on country code", () => {
-	const input = namedays.when("Filip", { countryCode: "SE" })
+	const input = namedays.when("Filip", {
+		countryCode: "SE",
+	})
 	const namedaySE = {
 		id: "SE-5-2-1",
 		countryCode: "SE",
@@ -64,7 +66,9 @@ test("queries by id", () => {
 })
 
 test("day 2 includes Filip's nameday", () => {
-	const input = namedays.on({ day: 2 })
+	const input = namedays.on({
+		day: 2,
+	})
 	const nameday = {
 		id: "SE-5-2-1",
 		countryCode: "SE",
@@ -78,7 +82,9 @@ test("day 2 includes Filip's nameday", () => {
 })
 
 test("month May includes Filip's nameday", () => {
-	const input = namedays.on({ month: 5 })
+	const input = namedays.on({
+		month: 5,
+	})
 	const nameday = {
 		id: "SE-5-2-1",
 		countryCode: "SE",
@@ -92,7 +98,10 @@ test("month May includes Filip's nameday", () => {
 })
 
 test("date May 2nd includes Filip's nameday", () => {
-	const input = namedays.on({ month: 5, day: 2 })
+	const input = namedays.on({
+		month: 5,
+		day: 2,
+	})
 	const nameday = {
 		id: "SE-5-2-1",
 		countryCode: "SE",

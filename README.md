@@ -51,7 +51,7 @@ import { namedays } from "namedays"
 namedays.all()
 ```
 
-### `namedays.today(settings?: { countryCode?: CountryCode }): Nameday[]`
+### `namedays.today(settings?: { countryCode?: CountryCode }): Array<Nameday>`
 
 Namedays of current day.
 
@@ -62,10 +62,12 @@ import { namedays } from "namedays"
 namedays.today()
 
 // all Swedish namedays of current day
-namedays.today({ countryCode: "SE" })
+namedays.today({
+	countryCode: "SE",
+})
 ```
 
-### `namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Nameday[]`
+### `namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Array<Nameday>`
 
 Namedays of specified name.
 
@@ -76,7 +78,9 @@ import { namedays } from "namedays"
 namedays.when("Filip")
 
 // Filip's Swedish nameday
-namedays.when("Filip", { countryCode: "SE" })
+namedays.when("Filip", {
+	countryCode: "SE",
+})
 ```
 
 ### `namedays.who(id: string): Nameday | undefined`
@@ -90,7 +94,7 @@ import { namedays } from "namedays"
 namedays.who("SE-5-2-1")
 ```
 
-### `namedays.on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Nameday[]`
+### `namedays.on(date: { month?: number; day?: number }, settings?: { countryCode?: CountryCode }): Array<Nameday>`
 
 Namedays of specified date.
 
@@ -98,16 +102,31 @@ Namedays of specified date.
 import { namedays } from "namedays"
 
 // all namedays in May, regardless of country
-namedays.on({ month: 5 })
+namedays.on({
+	month: 5,
+})
 
 // all namedays the 2nd every month, regardless of country
-namedays.on({ day: 2 })
+namedays.on({
+	day: 2,
+})
 
 // all namedays May 2nd, regardless of country
-namedays.on({ month: 5, day: 2 })
+namedays.on({
+	month: 5,
+	day: 2,
+})
 
 // all Swedish namedays May 2nd
-namedays.on({ month: 5, day: 2 }, { countryCode: "SE" })
+namedays.on(
+	{
+		month: 5,
+		day: 2,
+	},
+	{
+		countryCode: "SE",
+	},
+)
 ```
 
 ## License

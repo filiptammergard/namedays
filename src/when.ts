@@ -3,8 +3,10 @@ import type { CountryCode, Nameday } from "./types"
 
 export function when(
 	name: string,
-	settings?: { countryCode?: CountryCode },
-): Nameday[] {
+	settings?: {
+		countryCode?: CountryCode
+	},
+): Array<Nameday> {
 	const filteredNamedays = filterByCountryCode(settings?.countryCode)
 
 	return filteredNamedays.filter(
