@@ -1,6 +1,6 @@
 {
 	"name": "namedays",
-	"version": "2.2.2",
+	"version": "2.3.0",
 	"description": "A minimal namedays API",
 	"scripts": {
 		"build": "tsup src/index.ts --format esm,cjs --dts",
