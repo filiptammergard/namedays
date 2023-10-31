@@ -113,3 +113,41 @@ test("date May 2nd includes Filip's nameday", () => {
 	}
 	expect(input).toContainEqual(nameday)
 })
+
+test("`when` handles string", () => {
+	const input = namedays.when("Filip")
+	const nameday = {
+		id: "SE-5-2-1",
+		countryCode: "SE",
+		name: "Filip",
+		date: {
+			month: 5,
+			day: 2,
+		},
+	}
+	expect(input).toContainEqual(nameday)
+})
+
+test("`when` handles array", () => {
+	const input = namedays.when(["Filip", "Ida"])
+	const filip = {
+		id: "SE-5-2-1",
+		countryCode: "SE",
+		name: "Filip",
+		date: {
+			month: 5,
+			day: 2,
+		},
+	}
+	const ida = {
+		id: "SE-9-14-1",
+		countryCode: "SE",
+		name: "Ida",
+		date: {
+			month: 9,
+			day: 14,
+		},
+	}
+	expect(input).toContainEqual(filip)
+	expect(input).toContainEqual(ida)
+})

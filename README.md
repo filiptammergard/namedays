@@ -87,13 +87,11 @@ namedays.today({
 
 ### When
 
-`namedays.when(name: string, settings?: { countryCode?: CountryCode }, ): Array<Nameday>`
-
 `namedays.when` is a function that returns the nameday of a specific name.
 
 #### Parameters
 
-- `name`: The name you want the nameday for.
+- `name`: The name or names you want the nameday for.
 - Optional `settings`: An object where country code can be set.
 
 #### Returns
@@ -112,6 +110,9 @@ namedays.when("Filip")
 namedays.when("Filip", {
 	countryCode: "SE",
 })
+
+// all Filip's and Ida's namedays, regardless of country
+namedays.when(["Filip", "Ida"])
 ```
 
 ### Who
