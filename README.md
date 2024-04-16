@@ -46,7 +46,7 @@ import { Nameday } from "namedays"
 
 #### Parameters
 
-`namedays.all()` takes no parameters.
+- Optional `settings`: An object where country code can be set.
 
 #### Returns
 

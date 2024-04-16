@@ -1,4 +1,4 @@
-import { namedays as all } from "./namedays/index"
+import { all } from "./all"
 import { on } from "./on"
 import { today } from "./today"
 import { when } from "./when"
