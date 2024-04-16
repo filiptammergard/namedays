@@ -1,5 +1,11 @@
 # namedays
 
+## 3.0.0
+
+### Major Changes
+
+- fbcbe10: Make namedays.all a function.
+
 ## 2.3.0
 
 ### Minor Changes
