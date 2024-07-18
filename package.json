@@ -50,5 +50,6 @@
 	"publishConfig": {
 		"access": "public",
 		"provenance": true
-	}
+	},
+	"packageManager": "pnpm@9.5.0"
 }
