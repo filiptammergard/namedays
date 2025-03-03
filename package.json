@@ -18,7 +18,7 @@
 		"@tammergard/tsconfig": "2.8.0",
 		"eslint": "8.57.1",
 		"prettier": "3.5.2",
-		"tsup": "8.3.6",
+		"tsup": "8.4.0",
 		"typescript": "5.7.3",
 		"vitest": "3.0.7"
 	},
