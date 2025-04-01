@@ -290,6 +290,15 @@ export const namedaysSE: Array<Nameday> = [
 		},
 	},
 	{
+		id: "SE-1-19-2",
+		countryCode: "SE",
+		name: "Henry",
+		date: {
+			month: 1,
+			day: 19,
+		},
+	},
+	{
 		id: "SE-1-20-1",
 		countryCode: "SE",
 		name: "Fabian",
@@ -902,6 +911,15 @@ export const namedaysSE: Array<Nameday> = [
 		},
 	},
 	{
+		id: "SE-2-28-2",
+		countryCode: "SE",
+		name: "Maja",
+		date: {
+			month: 2,
+			day: 28,
+		},
+	},
+	{
 		id: "SE-3-1-1",
 		countryCode: "SE",
 		name: "Albin",
@@ -1094,6 +1112,15 @@ export const namedaysSE: Array<Nameday> = [
 		id: "SE-3-12-1",
 		countryCode: "SE",
 		name: "Viktoria",
+		date: {
+			month: 3,
+			day: 12,
+		},
+	},
+	{
+		id: "SE-3-12-2",
+		countryCode: "SE",
+		name: "Regina",
 		date: {
 			month: 3,
 			day: 12,
@@ -1373,6 +1400,15 @@ export const namedaysSE: Array<Nameday> = [
 		id: "SE-3-31-1",
 		countryCode: "SE",
 		name: "Ester",
+		date: {
+			month: 3,
+			day: 31,
+		},
+	},
+	{
+		id: "SE-3-31-2",
+		countryCode: "SE",
+		name: "Noa",
 		date: {
 			month: 3,
 			day: 31,
@@ -3296,6 +3332,15 @@ export const namedaysSE: Array<Nameday> = [
 		},
 	},
 	{
+		id: "SE-7-29-2",
+		countryCode: "SE",
+		name: "Olle",
+		date: {
+			month: 7,
+			day: 29,
+		},
+	},
+	{
 		id: "SE-7-30-1",
 		countryCode: "SE",
 		name: "Algot",
@@ -4745,6 +4790,15 @@ export const namedaysSE: Array<Nameday> = [
 		},
 	},
 	{
+		id: "SE-11-2-2",
+		countryCode: "SE",
+		name: "Tim",
+		date: {
+			month: 11,
+			day: 2,
+		},
+	},
+	{
 		id: "SE-11-3-1",
 		countryCode: "SE",
 		name: "Hubert",
@@ -5216,6 +5270,15 @@ export const namedaysSE: Array<Nameday> = [
 		id: "SE-12-3-1",
 		countryCode: "SE",
 		name: "Lydia",
+		date: {
+			month: 12,
+			day: 3,
+		},
+	},
+	{
+		id: "SE-12-3-2",
+		countryCode: "SE",
+		name: "Cornelia",
 		date: {
 			month: 12,
 			day: 3,
