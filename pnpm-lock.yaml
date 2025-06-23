@@ -13,10 +13,10 @@ importers:
         version: 2.29.5
       '@tammergard/eslint-config-base':
         specifier: 5.0.6
-        version: 5.0.6(eslint@8.57.1)(prettier@3.5.3)
+        version: 5.0.6(eslint@8.57.1)(prettier@3.6.0)
       '@tammergard/prettier-config':
         specifier: 2.1.0
-        version: 2.1.0(prettier@3.5.3)
+        version: 2.1.0(prettier@3.6.0)
       '@tammergard/tsconfig':
         specifier: 2.9.0
         version: 2.9.0(typescript@5.8.3)
@@ -24,8 +24,8 @@ importers:
         specifier: 8.57.1
         version: 8.57.1
       prettier:
-        specifier: 3.5.3
-        version: 3.5.3
+        specifier: 3.6.0
+        version: 3.6.0
       tsup:
         specifier: 8.5.0
         version: 8.5.0(postcss@8.5.6)(typescript@5.8.3)
@@ -1822,8 +1822,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.0:
+    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2803,7 +2803,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.44.0':
     optional: true
 
-  '@tammergard/eslint-config-base@5.0.6(eslint@8.57.1)(prettier@3.5.3)':
+  '@tammergard/eslint-config-base@5.0.6(eslint@8.57.1)(prettier@3.6.0)':
     dependencies:
       '@eslint/eslintrc': 2.1.2
       '@eslint/js': 8.52.0
@@ -2811,9 +2811,9 @@ snapshots:
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.29.0(eslint@8.57.1))(eslint@8.57.1)
       eslint-config-prettier: 9.0.0(eslint@8.57.1)
       eslint-plugin-import: 2.29.0(eslint@8.57.1)
-      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.0.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.5.3)
+      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.0.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.6.0)
       globals: 13.23.0
-      prettier: 3.5.3
+      prettier: 3.6.0
     transitivePeerDependencies:
       - '@types/eslint'
       - '@typescript-eslint/parser'
@@ -2821,9 +2821,9 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@tammergard/prettier-config@2.1.0(prettier@3.5.3)':
+  '@tammergard/prettier-config@2.1.0(prettier@3.6.0)':
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.0
 
   '@tammergard/tsconfig@2.9.0(typescript@5.8.3)':
     dependencies:
@@ -3307,10 +3307,10 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.0.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.5.3):
+  eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.0.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.6.0):
     dependencies:
       eslint: 8.57.1
-      prettier: 3.5.3
+      prettier: 3.6.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.5
     optionalDependencies:
@@ -4018,7 +4018,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.5.3: {}
+  prettier@3.6.0: {}
 
   punycode@2.3.0: {}
 
