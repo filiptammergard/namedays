@@ -8,16 +8,11 @@ export function when(
 	},
 ): Array<Nameday> {
 	const filteredNamedays = filterByCountryCode(settings?.countryCode)
+	const names = new Set(
+		(Array.isArray(name) ? name : [name]).map((n) => n.toLowerCase()),
+	)
 
-	if (Array.isArray(name)) {
-		return filteredNamedays.filter((nameday) =>
-			name
-				.map((name) => name.toLowerCase())
-				.includes(nameday.name.toLowerCase()),
-		)
-	}
-
-	return filteredNamedays.filter(
-		(nameday) => nameday.name.toLowerCase() === name.toLowerCase(),
+	return filteredNamedays.filter((nameday) =>
+		names.has(nameday.name.toLowerCase()),
 	)
 }

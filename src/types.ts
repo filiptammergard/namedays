@@ -2,10 +2,10 @@ export interface Nameday {
 	id: string
 	countryCode: CountryCode
 	name: string
-	date: {
-		month: number
-		day: number
-	}
+	month: number
+	day: number
 }
 
-export type CountryCode = "DK" | "NO" | "SE"
+export type NamedayInput = Omit<Nameday, "id">
+
+export type CountryCode = "CZ" | "DE" | "DK" | "NO" | "PL" | "SE"

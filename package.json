@@ -3,7 +3,7 @@
 	"version": "3.1.0",
 	"description": "A minimal namedays API",
 	"scripts": {
-		"build": "tsup src/index.ts --format esm,cjs --dts",
+		"build": "tsdown src/index.ts --format esm,cjs --dts",
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"format-check": "prettier --check .",
@@ -13,24 +13,31 @@
 	},
 	"devDependencies": {
 		"@changesets/cli": "2.31.0",
-		"@tammergard/eslint-config-base": "5.0.6",
+		"@tammergard/eslint-config-base": "6.0.0",
 		"@tammergard/prettier-config": "3.0.0",
 		"@tammergard/tsconfig": "2.10.0",
-		"eslint": "8.57.1",
+		"eslint": "10.4.0",
 		"prettier": "3.8.3",
-		"tsup": "8.5.1",
+		"tsdown": "0.22.0",
 		"typescript": "5.9.3",
 		"vitest": "4.1.6"
 	},
 	"files": [
 		"dist"
 	],
-	"main": "./dist/index.js",
+	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.cts",
 	"exports": {
 		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.js"
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
 		}
 	},
 	"homepage": "https://github.com/filiptammergard/namedays#readme",

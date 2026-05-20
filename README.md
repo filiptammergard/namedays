@@ -24,14 +24,12 @@ interface Nameday {
 	id: string
 	countryCode: CountryCode
 	name: string
-	date: {
-		month: number
-		day: number
-	}
+	month: number
+	day: number
 }
 ```
 
-`CountryCode` is the union type of country codes currently supported fully or
+`CountryCode` is the union type of country codes currently supported fully or
 partly.
 
 `Nameday` is available for usage if needed:
@@ -134,6 +132,28 @@ import { namedays } from "namedays"
 
 // nameday with id SE-5-2-1, `undefined` if there are no nameday with that id
 namedays.who("SE-5-2-1")
+```
+
+### Where
+
+`namedays.where` is a function that returns all namedays for a given country
+code.
+
+#### Parameters
+
+- `countryCode`: The country code you want the namedays for.
+
+#### Returns
+
+All namedays for the passed country code.
+
+#### Example
+
+```ts
+import { namedays } from "namedays"
+
+// all Swedish namedays
+namedays.where("SE")
 ```
 
 ### On
