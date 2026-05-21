@@ -1,6 +1,6 @@
 # namedays
 
-A minimal API for namedays.
+Look up namedays by name, date, country, or ID.
 
 ## Installation
 
@@ -8,18 +8,27 @@ A minimal API for namedays.
 # npm
 npm install namedays
 
-# yarn
-yarn add namedays
-
 # pnpm
 pnpm add namedays
+
+# bun
+bun add namedays
 ```
 
 ## Usage
 
-The interface that all namedays adhere to is called Nameday and looks like this:
+```ts
+import { namedays } from "namedays"
+
+namedays.today() // all namedays for today, all countries
+namedays.when("Filip", { countryCode: "SE" }) // Filip's Swedish nameday
+```
+
+The interface that all namedays adhere to is `Nameday`:
 
 ```ts
+import type { Nameday } from "namedays"
+
 interface Nameday {
 	id: string
 	countryCode: CountryCode
@@ -30,176 +39,78 @@ interface Nameday {
 ```
 
 `CountryCode` is the union type of country codes currently supported fully or
-partly.
+partly: `"CZ" | "DE" | "DK" | "NO" | "PL" | "SE"`.
 
-`Nameday` is available for usage if needed:
+## API
+
+### `namedays.all(settings?)`
+
+Returns all namedays.
+
+- `settings.countryCode` (optional): filter by country code.
 
 ```ts
-import { Nameday } from "namedays"
+namedays.all() // all namedays, all countries
+namedays.all({ countryCode: "SE" }) // all Swedish namedays
 ```
 
-### All
+### `namedays.today(settings?)`
 
-`namedays.all` is a function that returns all namedays.
+Returns namedays for the current day.
 
-#### Parameters
-
-- Optional `settings`: An object where country code can be set.
-
-#### Returns
-
-All namedays.
-
-#### Example
+- `settings.countryCode` (optional): filter by country code.
 
 ```ts
-import { namedays } from "namedays"
-
-// all namedays, regardless of which country
-namedays.all()
+namedays.today() // all namedays of current day, all countries
+namedays.today({ countryCode: "SE" }) // Swedish namedays of current day
 ```
 
-### Today
+### `namedays.when(name, settings?)`
 
-`namedays.today` is a function that returns namedays of the current day.
+Returns the nameday(s) of a specific name. Case insensitive.
 
-#### Parameters
-
-- Optional `settings`: An object where country code can be set.
-
-#### Returns
-
-The namedays of today.
+- `name`: a single name or an array of names.
+- `settings.countryCode` (optional): filter by country code.
 
 ```ts
-import { namedays } from "namedays"
-
-// all namedays of current day, regardless of country
-namedays.today()
-
-// all Swedish namedays of current day
-namedays.today({
-	countryCode: "SE",
-})
+namedays.when("Filip") // all Filip's namedays, all countries
+namedays.when("Filip", { countryCode: "SE" }) // Filip's Swedish nameday
+namedays.when(["Filip", "Ida"]) // all Filip's and Ida's namedays
 ```
 
-### When
+### `namedays.who(id)`
 
-`namedays.when` is a function that returns the nameday of a specific name.
+Returns the nameday with a specific ID, or `undefined` if not found.
 
-#### Parameters
-
-- `name`: The name or names you want the nameday for.
-- Optional `settings`: An object where country code can be set.
-
-#### Returns
-
-The nameday of the passed name.
-
-#### Examples
+- `id`: the nameday ID, e.g. `"SE-5-2-1"`.
 
 ```ts
-import { namedays } from "namedays"
-
-// all Filip's namedays, regardless of country
-namedays.when("Filip")
-
-// Filip's Swedish nameday
-namedays.when("Filip", {
-	countryCode: "SE",
-})
-
-// all Filip's and Ida's namedays, regardless of country
-namedays.when(["Filip", "Ida"])
-```
-
-### Who
-
-`namedays.who` is a function that returns the nameday of a specific ID.
-
-#### Parameters
-
-- `id`: The ID of the nameday you want.
-
-#### Returns
-
-The nameday of a specific ID. If ID doesn't exist, `undefined` is returned.
-
-#### Examples
-
-```ts
-import { namedays } from "namedays"
-
-// nameday with id SE-5-2-1, `undefined` if there are no nameday with that id
 namedays.who("SE-5-2-1")
 ```
 
-### Where
+### `namedays.where(countryCode)`
 
-`namedays.where` is a function that returns all namedays for a given country
-code.
+Returns all namedays for a given country code.
 
-#### Parameters
-
-- `countryCode`: The country code you want the namedays for.
-
-#### Returns
-
-All namedays for the passed country code.
-
-#### Example
+- `countryCode`: e.g. `"SE"`, `"NO"`.
 
 ```ts
-import { namedays } from "namedays"
-
-// all Swedish namedays
-namedays.where("SE")
+namedays.where("SE") // all Swedish namedays
 ```
 
-### On
+### `namedays.on(date, settings?)`
 
-`namedays.on` is a function that returns the namedays of a specific day.
+Returns the namedays of a specific day.
 
-#### Parameters
-
-- `on`: The month and/or day you want the namedays for.
-- Optional `settings`: An object where country code can be set.
-
-#### Returns
-
-The namedays of a specific day.
-
-#### Examples
+- `date.month` (optional): month 1–12.
+- `date.day` (optional): day of month.
+- `settings.countryCode` (optional): filter by country code.
 
 ```ts
-import { namedays } from "namedays"
-
-// all namedays in May, regardless of country
-namedays.on({
-	month: 5,
-})
-
-// all namedays the 2nd every month, regardless of country
-namedays.on({
-	day: 2,
-})
-
-// all namedays May 2nd, regardless of country
-namedays.on({
-	month: 5,
-	day: 2,
-})
-
-// all Swedish namedays May 2nd
-namedays.on(
-	{
-		month: 5,
-		day: 2,
-	},
-	{
-		countryCode: "SE",
-	},
-)
+namedays.on({ month: 5 }) // all namedays in May, all countries
+namedays.on({ day: 2 }) // all namedays the 2nd, all countries
+namedays.on({ month: 5, day: 2 }) // all namedays May 2nd, all countries
+namedays.on({ month: 5, day: 2 }, { countryCode: "SE" }) // Swedish, May 2nd
 ```
 
 ## License

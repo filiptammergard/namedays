@@ -1,4 +1,4 @@
-import { describe, expect, test, vi } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { namedays } from "."
 
 const filipSE = {
@@ -26,63 +26,63 @@ const idaSE = {
 }
 
 describe("when", () => {
-	test("does not filter on country code when no country code is given", () => {
+	it("does not filter on country code when no country code is given", () => {
 		const input = namedays.when("Filip")
 		expect(input).toContainEqual(filipSE)
 		expect(input).toContainEqual(filipNO)
 	})
 
-	test("filters on country code", () => {
+	it("filters on country code", () => {
 		const input = namedays.when("Filip", { countryCode: "SE" })
 		expect(input).toContainEqual(filipSE)
 		expect(input).not.toContainEqual(filipNO)
 	})
 
-	test("handles string", () => {
+	it("handles string", () => {
 		expect(namedays.when("Filip")).toContainEqual(filipSE)
 	})
 
-	test("handles array", () => {
+	it("handles array", () => {
 		const input = namedays.when(["Filip", "Ida"])
 		expect(input).toContainEqual(filipSE)
 		expect(input).toContainEqual(idaSE)
 	})
 
-	test("is case insensitive", () => {
+	it("is case insensitive", () => {
 		expect(namedays.when("filip")).toContainEqual(filipSE)
 		expect(namedays.when("FILIP")).toContainEqual(filipSE)
 		expect(namedays.when(["fIlIp"])).toContainEqual(filipSE)
 	})
 
-	test("returns empty array for unknown name", () => {
+	it("returns empty array for unknown name", () => {
 		expect(namedays.when("ZzNotAName")).toStrictEqual([])
 	})
 })
 
 describe("who", () => {
-	test("queries by id", () => {
+	it("queries by id", () => {
 		expect(namedays.who("SE-5-2-1")).toStrictEqual(filipSE)
 	})
 
-	test("returns undefined for unknown id", () => {
+	it("returns undefined for unknown id", () => {
 		expect(namedays.who("XX-0-0-0")).toBeUndefined()
 	})
 })
 
 describe("on", () => {
-	test("filters by day only", () => {
+	it("filters by day only", () => {
 		expect(namedays.on({ day: 2 })).toContainEqual(filipSE)
 	})
 
-	test("filters by month only", () => {
+	it("filters by month only", () => {
 		expect(namedays.on({ month: 5 })).toContainEqual(filipSE)
 	})
 
-	test("filters by month and day", () => {
+	it("filters by month and day", () => {
 		expect(namedays.on({ month: 5, day: 2 })).toContainEqual(filipSE)
 	})
 
-	test("respects country code", () => {
+	it("respects country code", () => {
 		const input = namedays.on({ month: 5, day: 2 }, { countryCode: "SE" })
 		expect(input).toContainEqual(filipSE)
 		expect(input).not.toContainEqual(filipNO)
@@ -90,7 +90,7 @@ describe("on", () => {
 })
 
 describe("where", () => {
-	test("returns only namedays of the given country", () => {
+	it("returns only namedays of the given country", () => {
 		const input = namedays.where("SE")
 		expect(input).toContainEqual(filipSE)
 		expect(input).not.toContainEqual(filipNO)
@@ -99,13 +99,13 @@ describe("where", () => {
 })
 
 describe("all", () => {
-	test("returns namedays of all countries when no country code given", () => {
+	it("returns namedays of all countries when no country code given", () => {
 		const input = namedays.all()
 		expect(input).toContainEqual(filipSE)
 		expect(input).toContainEqual(filipNO)
 	})
 
-	test("filters on country code", () => {
+	it("filters on country code", () => {
 		const input = namedays.all({ countryCode: "SE" })
 		expect(input).toContainEqual(filipSE)
 		expect(input).not.toContainEqual(filipNO)
@@ -113,7 +113,7 @@ describe("all", () => {
 })
 
 describe("today", () => {
-	test("returns namedays matching the current date", () => {
+	it("returns namedays matching the current date", () => {
 		vi.useFakeTimers()
 		vi.setSystemTime(new Date(2026, 4, 2))
 		try {
@@ -127,12 +127,12 @@ describe("today", () => {
 describe("data integrity", () => {
 	const all = namedays.all()
 
-	test("all ids are unique", () => {
+	it("all ids are unique", () => {
 		const ids = all.map((nameday) => nameday.id)
 		expect(new Set(ids).size).toBe(ids.length)
 	})
 
-	test("ids match countryCode-month-day prefix", () => {
+	it("ids match countryCode-month-day prefix", () => {
 		for (const nameday of all) {
 			expect(
 				nameday.id.startsWith(
@@ -142,14 +142,14 @@ describe("data integrity", () => {
 		}
 	})
 
-	test("months are between 1 and 12", () => {
+	it("months are between 1 and 12", () => {
 		for (const nameday of all) {
 			expect(nameday.month).toBeGreaterThanOrEqual(1)
 			expect(nameday.month).toBeLessThanOrEqual(12)
 		}
 	})
 
-	test("days are valid for their month", () => {
+	it("days are valid for their month", () => {
 		const daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 		for (const nameday of all) {
 			expect(nameday.day).toBeGreaterThanOrEqual(1)

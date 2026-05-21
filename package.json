@@ -1,48 +1,27 @@
 {
 	"name": "namedays",
 	"version": "4.0.0",
-	"description": "A minimal namedays API",
-	"scripts": {
-		"build": "tsdown src/index.ts --format esm,cjs --dts",
-		"lint": "eslint .",
-		"format": "prettier --write .",
-		"format-check": "prettier --check .",
-		"release": "pnpm build && pnpm changeset publish",
-		"review": "pnpm install --frozen-lockfile && pnpm format-check && pnpm lint && pnpm test && pnpm build",
-		"test": "vitest --run"
-	},
-	"devDependencies": {
-		"@changesets/cli": "2.31.0",
-		"@tammergard/eslint-config-base": "6.0.0",
-		"@tammergard/prettier-config": "3.0.0",
-		"@tammergard/tsconfig": "2.10.0",
-		"eslint": "10.4.0",
-		"prettier": "3.8.3",
-		"tsdown": "0.22.0",
-		"typescript": "5.9.3",
-		"vitest": "4.1.6"
-	},
-	"files": [
-		"dist"
+	"description": "Look up namedays by name, date, country, or ID",
+	"keywords": [
+		"namedays",
+		"nameday",
+		"name-day",
+		"names",
+		"calendar",
+		"swedish",
+		"norwegian",
+		"danish",
+		"czech",
+		"german",
+		"polish"
 	],
-	"main": "./dist/index.cjs",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.cts",
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/index.d.mts",
-				"default": "./dist/index.mjs"
-			},
-			"require": {
-				"types": "./dist/index.d.cts",
-				"default": "./dist/index.cjs"
-			}
-		}
-	},
 	"homepage": "https://github.com/filiptammergard/namedays#readme",
 	"bugs": {
 		"url": "https://github.com/filiptammergard/namedays/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/filiptammergard/namedays.git"
 	},
 	"license": "MIT",
 	"author": {
@@ -50,13 +29,47 @@
 		"email": "filip+npm@tammergard.se",
 		"url": "https://tammergard.se"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/filiptammergard/namedays.git"
+	"sideEffects": false,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		}
+	},
+	"main": "dist/index.mjs",
+	"types": "dist/index.d.mts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown src/index.ts --format esm --dts",
+		"format": "prettier --write .",
+		"format-check": "prettier --check .",
+		"lint": "eslint .",
+		"prepublishOnly": "pnpm build",
+		"release": "pnpm changeset publish",
+		"review": "pnpm install --frozen-lockfile && pnpm format-check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+		"test": "vitest --run",
+		"typecheck": "tsc"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.31.0",
+		"@tammergard/eslint-config-base": "^6.1.0",
+		"@tammergard/prettier-config": "^3.0.0",
+		"@tammergard/tsconfig": "^3.0.0",
+		"eslint": "^10.4.0",
+		"prettier": "^3.8.3",
+		"tsdown": "^0.22.0",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.7"
+	},
+	"packageManager": "pnpm@10.33.2",
+	"engines": {
+		"node": ">=24"
 	},
 	"publishConfig": {
 		"access": "public",
 		"provenance": true
-	},
-	"packageManager": "pnpm@10.33.0"
+	}
 }
