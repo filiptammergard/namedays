@@ -16,7 +16,7 @@ importers:
         version: 6.1.0(eslint@10.4.0)
       '@tammergard/prettier-config':
         specifier: ^3.0.0
-        version: 3.0.1(prettier@3.8.3)
+        version: 3.0.2(prettier@3.8.3)
       '@tammergard/tsconfig':
         specifier: ^3.0.0
         version: 3.0.1(typescript@6.0.3)
@@ -443,9 +443,8 @@ packages:
     peerDependencies:
       eslint: '>=10.0.0'
 
-  '@tammergard/prettier-config@3.0.1':
-    resolution: {integrity: sha512-NmVgPQJgZE3Zf4GQ/fPKAi3jCEET10MMKfKBasRfnT/V4bxlu2kHzh8oFwP/7M/0d1udWfKFyRWs3kq9jUZcfw==}
-    engines: {node: '>=24'}
+  '@tammergard/prettier-config@3.0.2':
+    resolution: {integrity: sha512-TAAYGSfsf0YLKDhb4VuczP2VQJ0BbNCE1Swbgrci8rso/sucLFsguiwC+O+37V1Y7LZuKZRlIxL3Cg8DaeJc/A==}
     peerDependencies:
       prettier: '>=3.0.0'
 
@@ -1779,7 +1778,7 @@ snapshots:
       '@eslint/js': 10.0.1(eslint@10.4.0)
       eslint: 10.4.0
 
-  '@tammergard/prettier-config@3.0.1(prettier@3.8.3)':
+  '@tammergard/prettier-config@3.0.2(prettier@3.8.3)':
     dependencies:
       prettier: 3.8.3
 
