@@ -12,14 +12,14 @@ importers:
         specifier: ^2.31.0
         version: 2.31.0(@types/node@24.12.4)
       '@tammergard/eslint-config-base':
-        specifier: ^6.1.0
-        version: 6.1.0(eslint@10.4.1)
+        specifier: ^6.1.1
+        version: 6.1.1(eslint@10.4.1)
       '@tammergard/prettier-config':
-        specifier: ^3.0.0
+        specifier: ^3.0.2
         version: 3.0.2(prettier@3.8.3)
       '@tammergard/tsconfig':
-        specifier: ^3.0.0
-        version: 3.0.1(typescript@6.0.3)
+        specifier: ^3.0.2
+        version: 3.0.2(typescript@6.0.3)
       eslint:
         specifier: ^10.4.0
         version: 10.4.1
@@ -437,9 +437,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@tammergard/eslint-config-base@6.1.0':
-    resolution: {integrity: sha512-n8rNNnDExcA36FhQciEVTYEubef0qP0F8O9RKd0xFH/VnswuR9UDDsSVede7YDix7O7/PWzha3lv+6Tg7s+YNw==}
-    engines: {node: '>=24'}
+  '@tammergard/eslint-config-base@6.1.1':
+    resolution: {integrity: sha512-efgpPS3LTOxWMI1buRdVQcPL54iGYq9NXpQWq5xkauBGxfPP04KXn3HHUwfegzh5Mv5WkOxDHIDUITeGM7WnjA==}
     peerDependencies:
       eslint: '>=10.0.0'
 
@@ -448,9 +447,8 @@ packages:
     peerDependencies:
       prettier: '>=3.0.0'
 
-  '@tammergard/tsconfig@3.0.1':
-    resolution: {integrity: sha512-RiLRg/PqVHg2h6Vwc0FQCoPUNzYpd4xxMPvOMyYsO7gmPmlS/jTYGxbDbUPiJVHMbnYLm/PzfO74QGxWJDOgVg==}
-    engines: {node: '>=24'}
+  '@tammergard/tsconfig@3.0.2':
+    resolution: {integrity: sha512-bsuEvQdDqikQXFDI8sss2jtJcVOU4UIkTSGSWMFEI2nhutsOW78Mw5fXciblM0G4zzSpCzF8Y5BAsaO6njwLpA==}
     peerDependencies:
       typescript: '>=6'
 
@@ -1183,17 +1181,9 @@ packages:
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
 
-  tinyexec@1.1.2:
-    resolution: {integrity: sha512-dAqSqE/RabpBKI8+h26GfLq6Vb3JVXs30XYQjdMjaj/c2tS8IYYMbIzP599KtRj7c57/wYApb3QjgRgXmrCukA==}
-    engines: {node: '>=18'}
-
   tinyexec@1.2.4:
     resolution: {integrity: sha512-SHf/r48b7vOrjve9PxJo3MN5v5yuyjHvdUcrQffT3WXMUfnGmHDVbC4k3sHJaJTgZCwpUplIaAo5ANtMyp3YHg==}
     engines: {node: '>=18'}
-
-  tinyglobby@0.2.16:
-    resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
-    engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -1773,7 +1763,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@tammergard/eslint-config-base@6.1.0(eslint@10.4.1)':
+  '@tammergard/eslint-config-base@6.1.1(eslint@10.4.1)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.4.1)
       eslint: 10.4.1
@@ -1782,7 +1772,7 @@ snapshots:
     dependencies:
       prettier: 3.8.3
 
-  '@tammergard/tsconfig@3.0.1(typescript@6.0.3)':
+  '@tammergard/tsconfig@3.0.2(typescript@6.0.3)':
     dependencies:
       typescript: 6.0.3
 
@@ -2442,14 +2432,7 @@ snapshots:
 
   tinybench@2.9.0: {}
 
-  tinyexec@1.1.2: {}
-
   tinyexec@1.2.4: {}
-
-  tinyglobby@0.2.16:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
 
   tinyglobby@0.2.17:
     dependencies:
