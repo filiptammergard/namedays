@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@changesets/cli':
-        specifier: ^2.31.0
+        specifier: ^2.31.1
         version: 2.31.1(@types/node@24.12.4)
       '@tammergard/eslint-config-base':
         specifier: ^6.1.1
-        version: 6.1.1(eslint@10.8.0)
+        version: 6.1.1(eslint@10.8.1)
       '@tammergard/prettier-config':
         specifier: ^3.0.2
         version: 3.0.2(prettier@3.9.6)
@@ -21,10 +21,10 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2(typescript@7.0.2)
       eslint:
-        specifier: ^10.4.0
-        version: 10.8.0
+        specifier: ^10.8.1
+        version: 10.8.1
       prettier:
-        specifier: ^3.8.3
+        specifier: ^3.9.6
         version: 3.9.6
       tsdown:
         specifier: ^0.22.0
@@ -871,8 +871,8 @@ packages:
     resolution: {integrity: sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint@10.8.0:
-    resolution: {integrity: sha512-nuKKvN+oIBO0koN7Tm7dlkmnkc21mtt0QJLwAKzjLq14y6lRTdVG36MZHJ8eQHwdJMwZbQNMlPOYedMq/oVJvQ==}
+  eslint@10.8.1:
+    resolution: {integrity: sha512-wqA7W2jbsC/BnV9Iv1UZpKVFkO1AdNoSmYW8NWG4HNOBbkAMvIqDZ27pI2f07dqn583NcIC44ckjAcOXDL1QbQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -1769,9 +1769,9 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@10.8.0)':
+  '@eslint-community/eslint-utils@4.10.1(eslint@10.8.1)':
     dependencies:
-      eslint: 10.8.0
+      eslint: 10.8.1
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
@@ -1792,9 +1792,9 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/js@10.0.1(eslint@10.8.0)':
+  '@eslint/js@10.0.1(eslint@10.8.1)':
     optionalDependencies:
-      eslint: 10.8.0
+      eslint: 10.8.1
 
   '@eslint/object-schema@3.0.5': {}
 
@@ -1980,10 +1980,10 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@tammergard/eslint-config-base@6.1.1(eslint@10.8.0)':
+  '@tammergard/eslint-config-base@6.1.1(eslint@10.8.1)':
     dependencies:
-      '@eslint/js': 10.0.1(eslint@10.8.0)
-      eslint: 10.8.0
+      '@eslint/js': 10.0.1(eslint@10.8.1)
+      eslint: 10.8.1
 
   '@tammergard/prettier-config@3.0.2(prettier@3.9.6)':
     dependencies:
@@ -2284,9 +2284,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.8.0:
+  eslint@10.8.1:
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0)
+      '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.1)
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.5
       '@eslint/config-helpers': 0.7.0
