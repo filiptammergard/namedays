@@ -1,8 +1,2 @@
-overrides:
-  # vitest pinnar vite exakt, så en vanlig uppdatering når inte säkerhetsfixen
-  # i 8.0.16 (GHSA-fx2h-pf6j-xcff, GHSA-v6wh-96g9-6wx3). vitest peer-tillåter
-  # hela ^8, så det här är tryggt.
-  vite: "^8.0.16"
-
 minimumReleaseAgeExclude:
   - "@tammergard/*"
